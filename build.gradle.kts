@@ -1,6 +1,6 @@
 
 plugins {
-    kotlin("multiplatform") version "1.9.0"
+    kotlin("multiplatform") version "2.1.10"
     id("maven-publish")
 }
 
@@ -21,8 +21,11 @@ kotlin {
         browser { binaries.executable() }
         nodejs { binaries.executable() }
     }
+    watchosX64()
+    watchosArm64()
+    watchosDeviceArm64()
     watchosSimulatorArm64()
-    watchos()
+    watchosArm32()
     iosArm64()
     iosX64()
     iosSimulatorArm64()
